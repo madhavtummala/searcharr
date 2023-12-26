@@ -526,6 +526,7 @@ class Searcharr(object):
                     raise
 
     def cmd_movie(self, update, context):
+        
         logger.debug(f"Received movie cmd from [{update.message.from_user.username}]")
         if not self._authenticated(update.message.from_user.id):
             update.message.reply_text(
